@@ -6,13 +6,19 @@
     /* ========== COLORS (LIGHT MODE) ========== */
     --color-bg: #ffffff;
     --color-text: #111111;
+    --color-bg2: #F3F4F6;
 
-    --color-primary: #4f46e5;        /* couleur principale (boutons, liens) */
-    --color-secondary: #f3f4f6;      /* background secondaire */
-    --color-accent: #6366f1;         /* hover / highlights */
+    --color-primary: #3B82F6;
+    --color-secondary: #f3f4f6;
+    --color-accent: #8B5CF6;
 
     --color-border: #e5e7eb;
-    --color-muted-text: #6b7280;
+    --color-muted-text: #4B5563;
+    --nav-text: #494e57;
+
+    --btn-color1: #2563EB;
+    /* ========== MESURES ========== */
+    --nav-height: 70px;
 
     /* ========== UI ========== */
     --radius: 10px;
@@ -23,17 +29,201 @@
 body {
     font-family: Inter, sans-serif;
 }
+
 /* ------------------------- MAIN ------------------------- */
+
 main {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
 }
+
 /* ------------------------- HEADER ------------------------- */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    height: 100vh
+}
+.header .header-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg2);
+    height: 100vh;
+}
+.header-main #greeting {
+    font-size: 70px;
+    font-weight: 550;
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px ;
+}
+.header-main #description {
+    font-size: 25px;
+    font-weight: 450;
+    color: var(--nav-text);
+    border-bottom: 20px;
+    text-align: center;
+    width: 550px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#buttons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+#buttons a {
+    font-size: 1rem;
+    font-weight: 550;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+#buttons #projects {
+    background-color: var(--btn-color1);
+    color: white;
+}
+#buttons #projects:hover {
+    background-color: #174fca;
+    cursor: pointer;
+}
+#buttons #contact {
+    background-color: var(--color-bg);
+    font-size: 1rem;
+    font-weight: 550;
+    padding: 10px 20px;
+    color: var(--color-text)
+}
+#buttons #contact:hover {
+    background-color: var(--color-border);
+    cursor: pointer;
+}
+
 /* ------------------------- NAVBAR  */
-/* ------------------------- INTRO  */
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--nav-height);
+    width: 100%;
+    background-color: var(--color-bg);
+    position : fixed;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+    z-index: 1;
+}
+.navigation .name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10rem;
+    /* gradient color with text */
+    background: linear-gradient(
+            to right,
+            var(--color-primary),
+            var(--color-accent)
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.navigation ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin-right: 10rem;
+}
+.navigation ul li {
+    color: var(--nav-text);
+    cursor: default;
+    font-weight: 500;
+}
+.navigation ul li:hover {
+    color: var(--btn-color1);
+}
+
 /* ------------------------- ABOUT ------------------------- */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-bg);
+    height: 100vh;
+    margin-bottom: 1.5em;
+}
+.about p {
+    max-width: 700px;
+    margin: 5px;
+    padding: .5rem;
+    color: var(--color-muted-text);
+}
+.boxes {
+    display: flex;
+    justify-content: center;
+    margin: 4rem;
+    text-align: center;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    padding: 1.5rem 2.5rem;
+    border-radius: 15px;
+    width: 30%;
+}
+.box:hover {
+    background-color: var(--color-bg2);
+}
+.box .image {
+    width: 70px;
+}
+.box .title {
+    margin-top: 1rem;
+    font-size: 20px;
+    font-weight: 450;
+}
+.box .text {
+    margin-top: .5rem;
+    color: var(--color-muted-text);
+}
+
 /* ------------------------- PROJECTS ------------------------- */
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg2);
+}
+main .main-projects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+.text #title {
+    color: var(--color-text);
+    font-size: 3rem;
+    font-weight: 550;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.text #description {
+    color: var(--color-muted-text);
+    text-align: center;
+    max-width: 700px;
+}
 .project {
     display: flex;
     flex-direction: column;
@@ -42,7 +232,7 @@ main {
     border: 1px solid var(--color-border);
     outline: none;
     border-radius: 20px;
-    margin: 30px;
+    margin: 2rem 3rem;
     offset: none;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -53,7 +243,7 @@ main {
 }
 .project .image {
     width: 100%;
-    height: 350px;
+    height: 250px;
     margin-bottom: 20px;
 }
 .details {
@@ -100,7 +290,7 @@ main {
     margin-right: 5px;
 }
 .link #demo-text {
-    color: var(--color-primary);
+    color: var(--btn-color1);
 }
 .link #code-text {
     color: var(--color-muted-text);
@@ -110,7 +300,6 @@ main {
     gap: 12px;
     margin-top: 20px;
 }
-
 .project-links a {
     text-decoration: none;
     font-weight: 500;
@@ -127,10 +316,9 @@ main {
     background: var(--color-secondary);
 }
 .btn-demo {
-    background: var(--color-primary);
+    background: var(--btn-color1);
     color: white;
 }
-
 .btn-demo:hover {
     opacity: 0.9;
     transform: translateY(-2px);

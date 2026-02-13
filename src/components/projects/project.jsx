@@ -1,5 +1,3 @@
-import GitPic from '../assets/git-pic.png';
-import FollowLink from '../assets/follow-link.png';
 
 export default function Project(props) {
     return (
