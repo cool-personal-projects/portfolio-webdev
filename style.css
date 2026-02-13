@@ -32,6 +32,9 @@ body {
 
 /* ------------------------- MAIN ------------------------- */
 
+html {
+    scroll-behavior: smooth;
+}
 main {
     display: flex;
     flex-direction: column;
@@ -136,26 +139,28 @@ main {
     list-style: none;
     margin-right: 10rem;
 }
-.navigation ul li {
+.navigation ul li a {
     color: var(--nav-text);
     cursor: default;
     font-weight: 500;
+    text-decoration: none;
 }
-.navigation ul li:hover {
+.navigation ul li:hover a {
     color: var(--btn-color1);
 }
 
 /* ------------------------- ABOUT ------------------------- */
 
-.about {
+#about-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--color-bg);
     height: 100vh;
     margin-bottom: 1.5em;
+    scroll-margin-top: 70px; /* hauteur navbar */
 }
-.about p {
+#about-container p {
     max-width: 700px;
     margin: 5px;
     padding: .5rem;
@@ -194,10 +199,11 @@ main {
 
 /* ------------------------- PROJECTS ------------------------- */
 
-.projects-container {
+#projects-container {
     display: flex;
     flex-direction: column;
     background-color: var(--color-bg2);
+    scroll-margin-top: 70px; /* hauteur navbar */
 }
 main .main-projects {
     display: flex;
@@ -322,4 +328,18 @@ main .main-projects {
 .btn-demo:hover {
     opacity: 0.9;
     transform: translateY(-2px);
+}
+
+/* ------------------------- SKILLS ------------------------- */
+
+#skills-container {
+    scroll-margin-top: 70px; /* hauteur navbar */
+    display: flex;
+}
+
+/* ------------------------- CONTACT ------------------------- */
+
+#contact-container {
+    scroll-margin-top: 70px; /* hauteur navbar */
+    display: flex;
 }

@@ -5,7 +5,7 @@ import Sport from "../../assets/sport.png"
 
 export default function About() {
     return (
-        <div className="about">
+        <div id="about-container">
             <div className="text">
                 <p id="title">About Me</p>
                 <p id="description">I'm a passionate developer with a keen eye for design, dedicated to building exceptional digital products that make a difference.</p>

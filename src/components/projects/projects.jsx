@@ -20,7 +20,7 @@ export default function Projects() {
     ))
 
     return (
-        <div className="projects-container">
+        <section id="projects-container">
             <div className="text">
                 <p id="title">Featured Projects</p>
                 <p id="description">A selection of my recent work showcasing various technologies and design approaches</p>
@@ -60,6 +60,6 @@ export default function Projects() {
                     codeLink = "https://github.com/javaScript-small-projects/weather-app.git"
                 />
             </div>
-        </div>
+        </section>
     )
 }

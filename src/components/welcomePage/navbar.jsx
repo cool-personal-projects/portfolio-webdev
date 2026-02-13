@@ -3,10 +3,10 @@ export default function Navbar() {
         <nav className="navigation">
             <p className="name">Younes Tsouli</p>
             <ul>
-                <li>About</li>
-                <li>Projects</li>
-                <li>Skills</li>
-                <li>Contact</li>
+                <li><a href={"#about-container"}>About</a></li>
+                <li><a href={"#projects-container"}>Projects</a></li>
+                <li><a href={"#skills-container"}>Skills</a></li>
+                <li><a href={"#contact-container"}>Contact</a></li>
             </ul>
         </nav>
     )
