@@ -334,9 +334,10 @@ main .main-projects {
 .btn-code {
     border: 1px solid var(--color-border);
     color: var(--color-text);
+    background-color: var(--color-bg);
 }
 .btn-code:hover {
-    background: var(--color-secondary);
+    background: hsl(0, 0%, 95%);
 }
 .btn-demo {
     background: var(--btn-color1);

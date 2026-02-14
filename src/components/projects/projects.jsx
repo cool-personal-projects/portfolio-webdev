@@ -40,7 +40,7 @@ export default function Projects() {
                 />
                 <Project
                     image = {weather}
-                    title = "Weather Website"
+                    title = "Weather UpDate"
                     description = "Type your city and see the weather infos. I used openweathermap API to fetch the data."
                     languages = {buttonLangsProject1}
                     demoLink = "https://weather-app-project-ui.netlify.app"
@@ -52,7 +52,7 @@ export default function Projects() {
                     description = "Minimalist portfolio website showcasing creative work with smooth animations and transitions."
                     languages = {buttonLangsProject2}
                     demoLink = "https://green-calculator-js.netlify.app/"
-                    codeLink = "https://github.com/javaScript-small-projects/weather-app.git"
+                    codeLink = "https://github.com/javaScript-small-projects/calculator.git"
                 />
                 <Project
                     image = {leads}
