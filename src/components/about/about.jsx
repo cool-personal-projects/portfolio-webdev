@@ -27,16 +27,13 @@ export default function About() {
                     text = "I love collective sports"
                 />
             </div>
-            <p>
+            <p className="about-me">
                 I'm a passionate developer at the beginning of my professional journey,
                 constantly learning and building projects to improve my skills in web
-                development and design.
-            </p>
-
-            <p>
+                development and design. <br/>
                 Through personal projects and continuous practice, I focus on writing
                 clean, maintainable code and creating intuitive user experiences.
-
+                <br/>
                 I'm currently looking for an internship opportunity where I can grow,
                 contribute to real-world projects, and learn from experienced developers.
             </p>

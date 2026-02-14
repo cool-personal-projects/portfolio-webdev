@@ -4,8 +4,11 @@ export default function Project(props) {
         <div className="project">
             <img src={props.image} alt="image" className="image"/>
             <div className="details">
-                <h2 className="title">{props.title}</h2>
-                <p className="description">{props.description}</p>
+                <div id="details-text">
+                    <h2 className="title">{props.title}</h2>
+                    <p className="description">{props.description}</p>
+                </div>
+
                 <div className="languages">
                     {props.languages}
                 </div>

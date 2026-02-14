@@ -3,7 +3,7 @@ import NavBar from "./navbar.jsx";
 export default function Header() {
     return (
         <div className="header">
-            <NavBar />
+            <NavBar/>
             <div className="header-main">
                 <p id="greeting">Hi, I'm Younes Tsouli</p>
                 <p id="description">Creative Developer & Designer crafting beautiful digital experiences</p>
