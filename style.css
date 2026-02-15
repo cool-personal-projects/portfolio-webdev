@@ -160,7 +160,7 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: var(--color-bg);
-    height: 100vh;
+    offset: none;
     margin-bottom: 1.5em;
     scroll-margin-top: var(--nav-height); /* hauteur navbar */
 }
@@ -459,10 +459,155 @@ main .main-projects {
 .limit {
     margin-top: 5rem;
     margin-bottom: 2rem;
-    width: 1000px;
+
 }
 #contact-container #description {
     color: var(--color-muted-text);
     text-align: center;
     max-width: 700px;
+}
+
+/* --------------------- RESPONSIVE -------------------- */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section{
+    width: 100%;
+    margin: auto;
+}
+.limit {
+    width: 70%;
+}
+
+/* Tablette <= 992px */
+
+@media (max-width: 992px) {
+
+    .navigation .name {
+        margin-left: 2rem;
+    }
+
+    .navigation ul {
+        margin-right: 2rem;
+        gap: 1rem;
+    }
+
+    .project {
+        width: 80%;
+        height: auto;
+    }
+
+    .box {
+        width: 45%;
+    }
+
+    #skills-container .skills {
+        flex-wrap: wrap;
+    }
+
+}
+
+/* Mobile <= 786px */
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navigation {
+        padding: 0 1rem;
+    }
+
+    .navigation ul {
+        display: none; /* plus tard tu pourras faire un menu burger */
+    }
+
+    /* HEADER */
+    .header-main #greeting {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .header-main #description {
+        width: 90%;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    #buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /* ABOUT */
+    .boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 90%;
+    }
+
+    /* PROJECTS */
+    .project {
+        width: 95%;
+        margin: 1.5rem 0;
+    }
+
+    .project .image {
+        height: 200px;
+    }
+
+    /* SKILLS */
+    #skills-container {
+        height: auto;
+        padding-bottom: 3rem;
+    }
+
+    #skills-container .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #skills-container .skills .subject {
+        width: 90%;
+        margin: 1rem 0;
+    }
+
+    /* CONTACT */
+    #contact-container {
+        height: auto;
+        padding-bottom: 3rem;
+    }
+
+    #contact-container .links {
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+}
+
+/* Mobile 480px */
+
+@media (max-width: 480px) {
+
+    .header-main #greeting {
+        font-size: 32px;
+    }
+
+    .text #title {
+        font-size: 2rem;
+    }
+
+    .text #description {
+        font-size: 16px;
+    }
+
+    .languages {
+        flex-wrap: wrap;
+    }
+
 }
